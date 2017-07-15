@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+]>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="file://kike.owl" ontologyIRI="file://kike.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+>
+<Prefix name="" IRI="file://kike.owl"/>
+<Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+<Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+<Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+<Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+<Prefix name="kike" IRI="file://kike.owl"/>
+
+<Declaration><Class IRI="file://kike.owl#kike"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Interino"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Investigador"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Profesor"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Maestro"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Doctor"/></Declaration>
+<Declaration><Class IRI="file://kike.owl#Carpintero"/></Declaration>
+
+<SubClassOf><Class IRI="file://kike.owl#kike"/><Class IRI="file://kike.owl#Carpintero"/></SubClassOf>
+
+<SubClassOf><Class IRI="file://kike.owl#Interino"/><Class IRI="file://kike.owl#Doctor"/></SubClassOf>
+
+<SubClassOf><Class IRI="file://kike.owl#Investigador"/><Class IRI="file://kike.owl#Doctor"/></SubClassOf>
+
+
+<SubClassOf><Class IRI="file://kike.owl#Maestro"/><Class IRI="file://kike.owl#Doctor"/></SubClassOf>
+
+<SubClassOf><Class IRI="file://kike.owl#Doctor"/>
+<ObjectIntersectionOf><Class IRI="file://kike.owl#Maestro"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></ObjectIntersectionOf></SubClassOf>
+<SubClassOf><Class IRI="file://kike.owl#Doctor"/>
+<ObjectUnionOf><Class IRI="file://kike.owl#Maestro"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></ObjectUnionOf></SubClassOf>
+<SubClassOf><Class IRI="file://kike.owl#Doctor"/>
+<ObjectUnionOf><Class IRI="file://kike.owl#Maestro"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></ObjectUnionOf></SubClassOf>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/>
+<ObjectUnionOf><Class IRI="file://kike.owl#Maestro"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></ObjectUnionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Literal datatypeIRI="&xsd;string">Interino</Literal></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Class IRI="file://kike.owl#Maestro"/></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Class IRI="file://kike.owl#Maestro"/></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Class IRI="file://kike.owl#Maestro"/></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Literal datatypeIRI="&xsd;string">Maestro</Literal></EquivalentClasses>
+<EquivalentClasses><Class IRI="file://kike.owl#Doctor"/><Class IRI="file://kike.owl#Maestro"/></EquivalentClasses>
+
+<EquivalentClasses><Class IRI="file://kike.owl#Carpintero"/><Literal datatypeIRI="&xsd;string">kike</Literal></EquivalentClasses>
+
+</Ontology>
